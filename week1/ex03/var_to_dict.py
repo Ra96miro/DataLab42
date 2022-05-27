@@ -6,11 +6,13 @@
 #    By: gramiro- <gramiro-@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 16:57:09 by gramiro-          #+#    #+#              #
-#    Updated: 2022/05/17 17:39:22 by gramiro-         ###   ########.fr        #
+#    Updated: 2022/05/22 13:36:43 by gramiro-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-def convert():
+
+def my_dict():
+	
 	d = [
 	('Hendrix' , '1942'),
 	('Allman' , '1946'),
@@ -32,9 +34,12 @@ def convert():
 	('Frusciante', '1970'),
 	('Thompson' , '1949'),
 	('Burton' , '1939')
-	]
- 
-	for el in d:
-		print (el[1] + " : " + el[0])
-convert()
-		
+	] 
+
+	my_dictionary = {}
+	for value, key in d:
+		my_dictionary.setdefault(key, []).append(value)
+		for key, value in my_dictionary.items():
+			value = ' '.join([el for el in value])
+			print(f'{key} : {value}')
+my_dict()

@@ -1,20 +1,28 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    var.py                                             :+:      :+:    :+:    #
+#    intern.py                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: gramiro- <gramiro-@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/17 16:54:52 by gramiro-          #+#    #+#              #
-#    Updated: 2022/05/22 13:17:44 by gramiro-         ###   ########.fr        #
+#    Created: 2022/05/19 15:25:09 by gramiro-          #+#    #+#              #
+#    Updated: 2022/05/22 20:38:03 by gramiro-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-def my_var() -> None:
-	list1 = [42, "42", "quarante-deux", 42.0, True, [42], {42: 42}, (42,), set()]
-	for i in list1:
-		print(i, "has a type", type(i))
+class Intern:
+	def __init__(self, name = "My name? I’m nobody, an intern, I have no name."):
+			self.name = name
 
-if __name__ == "__main__":
-	my_var()
-	
+	def __str__(self):
+		return self.name
+
+	class Coffe:
+		def __str__(self):
+			return "This is the worst coffee you ever tasted."
+
+	def work(self):
+		raise Exception("I'm just an intern, I can't do that...")
+
+	def	make_coffee(self):
+		return self.Coffe()
